@@ -60,6 +60,6 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['clean', 'bliss', 'nodeunit']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'test', 'build-contrib']);
+  grunt.registerTask('default', ['jshint', 'test']);
 
 };

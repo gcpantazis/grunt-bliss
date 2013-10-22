@@ -1,5 +1,5 @@
 /*
- * grunt-contrib-bliss
+ * grunt-bliss
  *
  * Copyright (c) 2013 George Pantazis
  * Licensed under the MIT license.
@@ -59,8 +59,6 @@ module.exports = function(grunt) {
         options = grunt.util._.extend(options, {
           filename: filepath
         });
-
-        console.log(data);
 
         try {
           compiled = bliss.render('test/fixtures/bliss', data);

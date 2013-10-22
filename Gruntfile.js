@@ -37,8 +37,7 @@ module.exports = function(grunt) {
             year: '<%= grunt.template.today("yyyy") %>'
           }
         }
-      },
-
+      }
     },
 
     // Unit tests.

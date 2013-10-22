@@ -1,0 +1,21 @@
+@!(data)
+
+@{
+  products = [{
+    name: "foo",
+    price: 123
+  },{
+    name: "bar",
+    price: 123
+  }]
+}
+
+<ul>
+  <div>
+    @data.year
+  </div>
+  @for(var p=0; p<products.length; p++) {
+    @{ product = products[p] }
+    <li>@product.name: ($@product.price)</li>
+  }
+</ul>

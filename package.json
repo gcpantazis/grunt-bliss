@@ -1,0 +1,46 @@
+{
+  "name": "grunt-bliss",
+  "description": "Compile Bliss templates.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/gcpantazis/grunt-bliss",
+  "author": {
+    "name": "George Pantazis",
+    "url": "http://gcpantazis.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gcpantazis/grunt-bliss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gcpantazis/grunt-bliss/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/gcpantazis/grunt-bliss/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "grunt-lib-contrib": "~0.6.1",
+    "bliss": "~1.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.1",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-internal": "~0.4.5",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}

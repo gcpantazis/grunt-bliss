@@ -11,6 +11,7 @@ module.exports = function(grunt) {
 
   var _ = grunt.util._,
     Bliss = require('bliss'),
+    html = require('html'),
     helpers = require('grunt-lib-contrib').init(grunt);
 
   // content conversion for templates
@@ -74,7 +75,14 @@ module.exports = function(grunt) {
       if (output.length < 1) {
         grunt.log.warn('Destination not written because compiled files were empty.');
       } else {
-        grunt.file.write(f.dest, output.join(grunt.util.normalizelf(options.separator)));
+
+        var finalOut = output.join(grunt.util.normalizelf(options.separator));
+
+        finalOut = html.prettyPrint(finalOut, {
+          'indent_size': 2
+        });
+
+        grunt.file.write(f.dest, finalOut);
         grunt.log.writeln('File "' + f.dest + '" created.');
       }
     });

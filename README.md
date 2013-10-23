@@ -25,18 +25,23 @@ Configuration
 --------------------------------------
 
       bliss: {
+        options: {
+          data: {
+            day: 10,
+            year: 2001
+          }
+        },
         compile: {
           files: {
             'tmp/bliss.html': ['test/fixtures/bliss.js.html']
           },
           options: {
             data: {
-              test: true,
-              year: '<%= grunt.template.today("yyyy") %>'
+              year: 2013
             }
           }
         }
-      },
+      }
 
 Related template (bliss.js.html):
 
@@ -62,10 +67,10 @@ Related template (bliss.js.html):
         }
       </ul>
 
-Output (Assuming you ran this example in 2013):
+Output:
 
       <ul>
-        <div>2013</div>
+        <div>2013-10</div>
         <li>foo: ($123)</li>
         <li>bar: ($123)</li>
       </ul>

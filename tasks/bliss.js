@@ -28,9 +28,13 @@ module.exports = function(grunt) {
 
     var bliss = new Bliss();
 
+    var taskOpts = grunt.config(['bliss', 'options']) || {};
+
     var options = this.options({
       separator: grunt.util.linefeed + grunt.util.linefeed
     });
+
+    options = grunt.util._.merge(taskOpts, options);
 
     var data = options.data;
     delete options.data;

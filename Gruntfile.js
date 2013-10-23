@@ -27,19 +27,23 @@ module.exports = function(grunt) {
     },
 
     bliss: {
+      options: {
+        data: {
+          day: 10,
+          year: 1999
+        }
+      },
       compile: {
         files: {
           'tmp/bliss.html': ['test/fixtures/bliss.js.html']
         },
         options: {
           data: {
-            test: true,
             year: '<%= grunt.template.today("yyyy") %>'
           }
         }
       }
     },
-
 
     // Unit tests.
     nodeunit: {

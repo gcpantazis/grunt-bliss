@@ -1,7 +1,7 @@
 grunt-bliss [![Build Status](https://travis-ci.org/gcpantazis/grunt-bliss.png?branch=master)](https://travis-ci.org/gcpantazis/grunt-bliss)
 ================================
 
-> Compile Bliss templates.
+> Compile [Bliss](https://github.com/cstivers78/bliss) templates.
 
 Getting Started
 --------------------------------------
@@ -60,4 +60,12 @@ Related template (bliss.js.html):
           @{ product = products[p] }
           <li>@product.name: ($@product.price)</li>
         }
+      </ul>
+
+Output (Assuming you ran this example in 2013):
+
+      <ul>
+        <div>2013</div>
+        <li>foo: ($123)</li>
+        <li>bar: ($123)</li>
       </ul>

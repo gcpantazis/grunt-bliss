@@ -28,9 +28,11 @@ module.exports = function(grunt) {
 
     bliss: {
       options: {
-        data: {
-          day: 10,
-          year: 1999
+        context: {
+          data: {
+            day: 10,
+            year: 1999
+          }
         }
       },
       compile: {
@@ -38,8 +40,10 @@ module.exports = function(grunt) {
           'tmp/bliss.html': ['test/fixtures/bliss.js.html']
         },
         options: {
-          data: {
-            year: '<%= grunt.template.today("yyyy") %>'
+          context: {
+            data: {
+              year: 2013
+            }
           }
         }
       }

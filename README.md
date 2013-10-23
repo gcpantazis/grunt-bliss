@@ -26,9 +26,11 @@ Configuration
 
       bliss: {
         options: {
-          data: {
-            day: 10,
-            year: 2001
+          context: {
+            data: {
+              day: 10,
+              year: 1999
+            }
           }
         },
         compile: {
@@ -36,16 +38,16 @@ Configuration
             'tmp/bliss.html': ['test/fixtures/bliss.js.html']
           },
           options: {
-            data: {
-              year: 2013
+            context: {
+              data: {
+                year: '2013'
+              }
             }
           }
         }
       }
 
 Related template (bliss.js.html):
-
-      @!(data)
 
       @{
         products = [{

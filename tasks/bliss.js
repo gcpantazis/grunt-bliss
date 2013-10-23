@@ -26,8 +26,6 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('bliss', 'Compile bliss templates.', function() {
 
-    var bliss = new Bliss();
-
     var taskOpts = grunt.config(['bliss', 'options']) || {};
 
     var options = this.options({
@@ -36,8 +34,8 @@ module.exports = function(grunt) {
 
     options = grunt.util._.merge(taskOpts, options);
 
-    var data = options.data;
-    delete options.data;
+    var context = options.context;
+    delete options.context;
 
     var nsInfo;
 
@@ -66,7 +64,19 @@ module.exports = function(grunt) {
         });
 
         try {
-          compiled = bliss.render('test/fixtures/bliss', data);
+
+          var compiledContext = {};
+
+          for (var i in context) {
+            compiledContext[i] = context[i];
+          }
+
+          var bliss = new Bliss({
+            context: compiledContext
+          });
+
+          compiled = bliss.render(filename);
+
         } catch (e) {
           grunt.log.error(e);
           grunt.fail.warn('Bliss failed to compile ' + filepath + '.');

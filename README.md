@@ -59,7 +59,7 @@ Related template (bliss.js.html):
 
       <ul>
         <div>
-          @data.year
+          @data.year-@data.day
         </div>
         @for(var p=0; p<products.length; p++) {
           @{ product = products[p] }

@@ -65,14 +65,8 @@ module.exports = function(grunt) {
 
         try {
 
-          var compiledContext = {};
-
-          for (var i in context) {
-            compiledContext[i] = context[i];
-          }
-
           var bliss = new Bliss({
-            context: compiledContext
+            context: context
           });
 
           compiled = bliss.render(filename);

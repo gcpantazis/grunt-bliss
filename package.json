@@ -1,7 +1,7 @@
 {
   "name": "grunt-bliss",
   "description": "Compile Bliss templates.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/gcpantazis/grunt-bliss",
   "author": {
     "name": "George Pantazis",

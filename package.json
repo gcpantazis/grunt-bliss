@@ -27,7 +27,6 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "grunt-lib-contrib": "~0.6.1",
     "bliss": "~1.0.1",
     "html": "0.0.7"
   },

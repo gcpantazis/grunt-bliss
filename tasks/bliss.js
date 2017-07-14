@@ -11,8 +11,7 @@ module.exports = function(grunt) {
 
   var _ = grunt.util._,
     Bliss = require('bliss'),
-    html = require('html'),
-    helpers = require('grunt-lib-contrib').init(grunt);
+    html = require('html');
 
   // content conversion for templates
   var defaultProcessContent = function(content) {

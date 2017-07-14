@@ -9,10 +9,9 @@
 
 module.exports = function(grunt) {
 
-  var _ = grunt.util._,
+  var _ = require('lodash'),
     Bliss = require('bliss'),
-    html = require('html'),
-    helpers = require('grunt-lib-contrib').init(grunt);
+    html = require('html');
 
   // content conversion for templates
   var defaultProcessContent = function(content) {
@@ -32,7 +31,7 @@ module.exports = function(grunt) {
       separator: grunt.util.linefeed + grunt.util.linefeed
     });
 
-    options = grunt.util._.merge(taskOpts, options);
+    options = _.merge(taskOpts, options);
 
     var context = options.context;
     delete options.context;
@@ -59,7 +58,7 @@ module.exports = function(grunt) {
         var compiled, filename;
         filename = processName(filepath);
 
-        options = grunt.util._.extend(options, {
+        options = _.extend(options, {
           filename: filepath
         });
 
